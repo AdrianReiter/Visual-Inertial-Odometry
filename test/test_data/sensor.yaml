@@ -1,0 +1,12 @@
+sensor_type: camera
+comment: VI-Sensor cam0 (MT9V034)
+T_BS:
+  cols: 4
+  rows: 4
+  data: [-0.9995, 0.0075, 0.0300, 0.0451, 0.0076, 0.9999, 0.0048, -0.0288, -0.0300, 0.0050, -0.9995, -0.0280, 0.0, 0.0, 0.0, 1.0]
+rate_hz: 20
+resolution: [512, 512]
+camera_model: omni
+intrinsics: [190.978, 186.145, 254.931, 256.897]
+distortion_model: equidistant
+distortion_coefficients: [0.0034, 0.0005, -0.0017, 0.0005]

@@ -1,0 +1,22 @@
+add_executable(test_data_loader test_data_loader.cpp)
+target_link_libraries(test_data_loader PRIVATE vio_core)
+target_compile_definitions(test_data_loader PRIVATE
+    TEST_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/test_data"
+)
+add_test(NAME test_data_loader COMMAND test_data_loader)
+
+add_executable(test_imu_integrator test_imu_integrator.cpp)
+target_link_libraries(test_imu_integrator PRIVATE vio_core)
+add_test(NAME test_imu_integrator COMMAND test_imu_integrator)
+
+add_executable(test_feature_tracker test_feature_tracker.cpp)
+target_link_libraries(test_feature_tracker PRIVATE vio_core)
+add_test(NAME test_feature_tracker COMMAND test_feature_tracker)
+
+add_executable(test_triangulation test_triangulation.cpp)
+target_link_libraries(test_triangulation PRIVATE vio_core)
+add_test(NAME test_triangulation COMMAND test_triangulation)
+
+add_executable(test_ekf_estimator test_ekf_estimator.cpp)
+target_link_libraries(test_ekf_estimator PRIVATE vio_core)
+add_test(NAME test_ekf_estimator COMMAND test_ekf_estimator)
